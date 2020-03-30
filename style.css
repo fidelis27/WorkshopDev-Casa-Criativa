@@ -1,0 +1,273 @@
+:root {
+    --bg-color: #9027b0;
+    --bg-color-shadow: #9027b055
+ }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #e5e5e5;
+    color: #252828;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+input, bod
+
+a {
+    text-decoration: none;
+}
+#container {
+    width: 90%;
+    max-width: 880px;
+    margin: 20px auto 0;
+
+    display: flex;
+   
+}
+#intro {
+    width: 300px;
+    margin-right: 20px;
+}
+
+#intro header {
+    margin-top: 40px;
+} 
+
+main {
+    margin: 32px 0;
+   
+    
+}
+
+main p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-align: justify;
+}
+
+#buttons {
+    display: flex;
+    margin-bottom: 32px;    
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+button {
+    color: var(--bg-color);
+    border: none;
+    font-weight: bold;
+    background: none;
+    transition: filter 0.2s;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    
+}
+
+button.fat {
+    color: #fff;
+    background: var(--bg-color);
+    box-shadow: 0px 8px 16px var(--bg-color-shadow);
+}
+
+button:hover {
+    filter: brightness(90%);;
+}
+
+#buttons, footer {
+    text-align: center;
+    
+}
+
+footer{
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    color: #777;
+}
+
+footer a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--bg-color);
+    transition: filter 0.4s;
+}
+
+.idea {
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px;
+    background: #fff;
+
+    padding: 15px;
+    
+}
+
+.idea + .idea {
+    margin-top: 15px;
+}
+
+
+.idea img { 
+    width:45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.idea h3 {
+    margin: 0;
+}
+
+.idea p {
+    margin: 8px 0;
+    color: #777;
+    font-weight: 600;
+}
+.idea a {
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+.idea a:hover {filter: brightness(50%);
+}
+
+.idea .description {
+    margin: 10px 5px;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+/*  modal  */
+
+#modal {
+    background:var(--bg-color);
+    position: absolute;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal .content {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+#modal .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content .img {
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 60px;
+    
+}
+.content form {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+form input,
+form textarea{
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid var(--bg-color-shadow);
+
+    outline: none;
+    font-size: 14px;
+}
+
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+}
+form .group-button {
+    display: flex;
+    justify-content: space-between;
+    grid-column: span 2;
+    align-items: center;
+}
+
+form button {
+    
+    background: #fff;
+    width: 150px;
+    border-radius: 6px;
+    height: 30px;
+    cursor: pointer;
+    transition: filter 0.2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+
+form a {
+    width: 150px;
+    height: 30px;
+    background-color: #ffffff22;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 6px;
+
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+form a:hover {
+    background: #fff;
+    color: var(--bg-color);
+    text-decoration: none;
+
+}
+
+form button:hover{ 
+    filter: brightness(80%);
+}
+
+#modal.hide {
+    display: none;
+}
